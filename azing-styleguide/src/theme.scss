@@ -79,6 +79,10 @@ $azing-light-theme: mat-light-theme($azing-theme-primary, $azing-theme-accent, $
 // Override Typography.
 $custom-typography: mat-typography-config(
     $font-family:   '"Open Sans", sans-serif',
+    $display-4:     mat-typography-level(112px, 112px, 300, 'Montserrat'),
+    $display-3:     mat-typography-level(56px, 56px, 400, 'Montserrat'),
+    $display-2:     mat-typography-level(45px, 48px, 400, 'Montserrat'),
+    $display-1:     mat-typography-level(34px, 40px, 400, 'Montserrat'),
     $headline:      mat-typography-level(24px, 32px, 400, 'Montserrat'),
     $title:         mat-typography-level(20px, 32px, 500, 'Montserrat'),
     $subheading-2:  mat-typography-level(16px, 28px, 400, 'Montserrat'),

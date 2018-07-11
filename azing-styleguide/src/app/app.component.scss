@@ -1,5 +1,4 @@
 @import '../theme.scss';
-
 :host {
   display: block;
   position: absolute;
@@ -7,34 +6,40 @@
   top: 0;
   right: 0;
   bottom: 0;
-  background: mat-color($azing-theme-primary, 50);
+  background: mat-color($azing-theme-accent, 50);
   mat-toolbar {
     background: #fff;
-    border-bottom: 1px solid mat-color($azing-theme-primary, 100);
     img.logo {
       height: 28px;
     }
   }
-  .content {
-    margin: 32px auto;
-    mat-card {
-      border-radius: 16px;
-      width: 280px;
-      margin: 32px 16px 0;
-      vertical-align: top;
-      .colors {
+  .main-title {
+    padding-right: 16px;
+    margin-bottom: 8px;
+  }
+  mat-card {
+    border-radius: 16px;
+    width: 280px;
+    margin: 32px 16px 0;
+    vertical-align: top;
+    .default-spacing {
+      margin: 8px 0;
+    }
+    mat-form-field {
+      width: 100%;
+    }
+    .colors {
+      text-align: center;
+      .color {
+        cursor: default;
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        margin: 8px;
         text-align: center;
-        .color {
-          cursor: default;
-          display: inline-block;
-          width: 36px;
-          height: 36px;
-          line-height: 36px;
-          margin: 8px;
-          text-align: center;
-          &:nth-of-type(n+6) {
-            color: #fff;
-          }
+        &:nth-of-type(n+6) {
+          color: #fff;
         }
       }
     }
