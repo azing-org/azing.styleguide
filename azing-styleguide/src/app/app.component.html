@@ -1,0 +1,54 @@
+<mat-toolbar>
+  <img class="logo" src="https://azing.org/Portals/_default/skins/azing/images/logo.svg" alt="Azing Logo">
+  <!-- <h1 class="mat-h1">Azing Styleguide</h1> -->
+</mat-toolbar>
+
+<div class="content" fxLayout="row" fxLayoutAlign="center top">
+  <div>
+    <mat-card class="mat-elevation-z4">
+      <h1 class="mat-h1">Color</h1>
+      <h3 class="mat-subheading-2">Primary</h3>
+      <div class="colors">
+        <div class="color mat-body-2"
+          [style.background-color]="color[1]"
+          *ngFor="let color of primaryColors">{{color[0]}}</div>
+      </div>
+      <h3 class="mat-subheading-2">Accent</h3>
+      <div class="colors">
+          <div class="color mat-body-2"
+            [style.background-color]="color[1]"
+            *ngFor="let color of accentColors">{{color[0]}}</div>
+      </div>
+      <!-- <button mat-stroked-button color="primary">Primary Button</button>
+      <button mat-stroked-button color="accent">Accent Button</button> -->
+    </mat-card>
+    <mat-card class="mat-elevation-z4">
+      <h1 class="mat-h1">Typography</h1>
+
+      <h1 class="mat-h1" fxLayout="row">headline<span fxFlex></span>h1.mat-h1</h1>
+      <h2 class="mat-h2" fxLayout="row">title<span fxFlex></span>h2.mat-h2</h2>
+      <h3 class="mat-h3" fxLayout="row">subheading-2<span fxFlex></span>h3.mat-h3</h3>
+      <h4 class="mat-h4" fxLayout="row">subheading-1<span fxFlex></span>h4.mat-h4</h4>
+      <div class="mat-body-2" fxLayout="row">body-2<span fxFlex></span>.mat-body-2</div>
+      <div class="mat-body-1" fxLayout="row">body-1<span fxFlex></span>.mat-body-1</div>
+    </mat-card>
+  </div>
+  <div>
+    <mat-card class="mat-elevation-z4">
+      <h1 class="mat-h1">Angular Material Guide</h1>
+      <ol>
+        <li class="mat-body-1">
+          Include Fonts
+          <textarea class="code" [value]="fontsLink"></textarea>
+        </li>
+        <li class="mat-body-1">
+          Create theme.sscss
+          <textarea class="code" [value]="themeScss"></textarea>
+        </li>
+        <li>Lorem</li>
+        <li>Lorem</li>
+      </ol>
+    </mat-card>
+  </div>
+</div>
+=
