@@ -1,4 +1,4 @@
-@import '~@angular/material/theming';
+@import '../node_modules/@angular/material/theming';
 @include mat-core();
 
 // Define azing colors.
@@ -85,8 +85,8 @@ $custom-typography: mat-typography-config(
     $display-1:     mat-typography-level(34px, 40px, 400, 'Montserrat'),
     $headline:      mat-typography-level(24px, 32px, 400, 'Montserrat'),
     $title:         mat-typography-level(20px, 32px, 500, 'Montserrat'),
-    $subheading-2:  mat-typography-level(16px, 28px, 400, 'Montserrat'),
-    $subheading-1:  mat-typography-level(15px, 24px, 400, 'Montserrat')
+    $subheading-2:  mat-typography-level(16px, 28px, 700, 'Open Sans'),
+    $subheading-1:  mat-typography-level(15px, 24px, 700, 'Open Sans')
 );
 
 @include angular-material-typography($custom-typography);
