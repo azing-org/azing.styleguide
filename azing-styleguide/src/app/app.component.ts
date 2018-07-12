@@ -30,7 +30,7 @@ export class AppComponent {
     ['800', '#d0192a'],
     ['900', '#c2001d']
   ];
-  fontsLink = `<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Material+Icons" rel="stylesheet">`;
+  fontsLink = `<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Open+Sans:400,600,700|Material+Icons" rel="stylesheet">`;
   themeScssLink = `https://github.com/azing-org/azing.styleguide/blob/master/azing-styleguide/src/theme.scss`;
   themeCssLink = `https://azing-org.github.io/azing.styleguide/azing-styleguide/theme.css`;
   themeScssInclude = `@import 'theme.scss';`;
