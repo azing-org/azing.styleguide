@@ -7,11 +7,21 @@
   right: 0;
   bottom: 0;
   background: mat-color($azing-theme-primary, 50);
+  overflow: auto;
   mat-toolbar {
     background: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
     img.logo {
       height: 28px;
     }
+  }
+  .content {
+    margin: 64px 32px 32px 32px;
+    max-height: inherit !important;
   }
   .main-title {
     padding-right: 16px;
@@ -22,6 +32,9 @@
     width: 280px;
     margin: 32px 16px 0;
     vertical-align: top;
+    a {
+      color: inherit;
+    }
     .default-spacing {
       margin: 8px 0;
     }
