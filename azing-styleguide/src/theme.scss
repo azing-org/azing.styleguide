@@ -68,11 +68,46 @@ $mat-azing-gray: (
   )
 );
 
+$mat-azing-purple: (
+  50: #ede7f9,
+  100: #d0c3f1,
+  200: #b09be9,
+  300: #8f72e1,
+  400: #7453da,
+  500: #5634d3,
+  600: #4b2fcd,
+  700: #3828c4,
+  800: #2122bd,
+  900: #0015b3,
+  A100: #ea80fc,
+  A200: #e040fb,
+  A400: #d500f9,
+  A700: #aa00ff,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $light-primary-text,
+    400: $light-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
 $azing-theme-primary: mat-palette($mat-azing-gray);
 $azing-theme-accent: mat-palette($mat-azing-red, A200, A100, A400);
+$azing-theme-purple: mat-palette($mat-azing-purple, A200, A100, A400);
 $azing-theme-warn: mat-palette($mat-red);
 
 $azing-light-theme: mat-light-theme($azing-theme-primary, $azing-theme-accent, $azing-theme-warn);
+$azing-purple-theme: mat-light-theme($azing-theme-purple, $azing-theme-accent, $azing-theme-warn);
 
 @include angular-material-theme($azing-light-theme);
 
