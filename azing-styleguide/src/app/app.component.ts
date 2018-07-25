@@ -46,4 +46,8 @@ export class AppComponent {
   themeScssLink = `https://github.com/azing-org/azing.styleguide/blob/master/azing-styleguide/src/theme.scss`;
   themeCssLink = `https://azing-org.github.io/azing.styleguide/azing-styleguide/theme.css`;
   themeScssInclude = `@import 'theme.scss';`;
+
+  copyColor(color) {
+    (navigator as any).clipboard.writeText(color[1]);
+  }
 }
