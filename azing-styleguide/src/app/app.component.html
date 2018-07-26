@@ -13,21 +13,21 @@
         <h3 class="mat-subheading-2">Primary</h3>
         <mat-divider></mat-divider>
         <div class="colors">
-          <div mat-ripple [matTooltip]="'copy' + color[1] + ' to clipboard'" class="color mat-body-2" *ngFor="let color of primaryColors"
+          <div mat-ripple [matTooltip]="'copy ' + color[1] + ' to clipboard'" class="color mat-body-2" *ngFor="let color of primaryColors"
             [style.background-color]="color[1]"
             (click)="copyColor(color)">{{color[0]}}</div>
         </div>
         <h3 class="mat-subheading-2">Secondary</h3>
         <mat-divider></mat-divider>
         <div class="colors">
-          <div mat-ripple [matTooltip]="'copy' + color[1] + ' to clipboard'" class="color mat-body-2" *ngFor="let color of accentColors"
+          <div mat-ripple [matTooltip]="'copy ' + color[1] + ' to clipboard'" class="color mat-body-2" *ngFor="let color of accentColors"
             [style.background-color]="color[1]"
             (click)="copyColor(color)">{{color[0]}}</div>
         </div>
         <h3 class="mat-subheading-2">Primary Theme 2</h3>
         <mat-divider></mat-divider>
         <div class="colors">
-          <div mat-ripple [matTooltip]="'copy' + color[1] + ' to clipboard'" class="color mat-body-2" *ngFor="let color of primary2Colors"
+          <div mat-ripple [matTooltip]="'copy ' + color[1] + ' to clipboard'" class="color mat-body-2" *ngFor="let color of primary2Colors"
             [style.background-color]="color[1]"
             (click)="copyColor(color)">{{color[0]}}</div>
         </div>
