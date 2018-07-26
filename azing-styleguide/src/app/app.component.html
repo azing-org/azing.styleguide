@@ -1,6 +1,5 @@
-<mat-toolbar class="mat-elevation-z4">
+<mat-toolbar class="mat-elevation-z3">
   <img class="logo" src="https://azing.org/Portals/_default/skins/azing/images/logo.svg" alt="Azing Logo">
-  <!-- <h1 class="mat-h1">Azing Styleguide</h1> -->
 </mat-toolbar>
 <div fxLayout="row" class="content" fxLayoutAlign="center center">
   <div>
@@ -14,21 +13,21 @@
         <h3 class="mat-subheading-2">Primary</h3>
         <mat-divider></mat-divider>
         <div class="colors">
-          <div mat-ripple matTooltip="copy to clipboard" class="color mat-body-2" *ngFor="let color of primaryColors"
+          <div mat-ripple [matTooltip]="'copy' + color[1] + ' to clipboard'" class="color mat-body-2" *ngFor="let color of primaryColors"
             [style.background-color]="color[1]"
             (click)="copyColor(color)">{{color[0]}}</div>
         </div>
         <h3 class="mat-subheading-2">Secondary</h3>
         <mat-divider></mat-divider>
         <div class="colors">
-          <div mat-ripple matTooltip="copy to clipboard" class="color mat-body-2" *ngFor="let color of accentColors"
+          <div mat-ripple [matTooltip]="'copy' + color[1] + ' to clipboard'" class="color mat-body-2" *ngFor="let color of accentColors"
             [style.background-color]="color[1]"
             (click)="copyColor(color)">{{color[0]}}</div>
         </div>
         <h3 class="mat-subheading-2">Primary Theme 2</h3>
         <mat-divider></mat-divider>
         <div class="colors">
-          <div mat-ripple matTooltip="copy to clipboard" class="color mat-body-2" *ngFor="let color of primary2Colors"
+          <div mat-ripple [matTooltip]="'copy' + color[1] + ' to clipboard'" class="color mat-body-2" *ngFor="let color of primary2Colors"
             [style.background-color]="color[1]"
             (click)="copyColor(color)">{{color[0]}}</div>
         </div>
