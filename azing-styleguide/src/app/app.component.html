@@ -14,22 +14,19 @@
         <mat-divider></mat-divider>
         <div class="colors">
           <div mat-ripple [matTooltip]="'copy ' + color[1] + ' to clipboard'" class="color mat-body-2" *ngFor="let color of primaryColors"
-            [style.background-color]="color[1]"
-            (click)="copyColor(color)">{{color[0]}}</div>
+            [style.background-color]="color[1]" (click)="copyColor(color)">{{color[0]}}</div>
         </div>
         <h3 class="mat-subheading-2">Secondary</h3>
         <mat-divider></mat-divider>
         <div class="colors">
           <div mat-ripple [matTooltip]="'copy ' + color[1] + ' to clipboard'" class="color mat-body-2" *ngFor="let color of accentColors"
-            [style.background-color]="color[1]"
-            (click)="copyColor(color)">{{color[0]}}</div>
+            [style.background-color]="color[1]" (click)="copyColor(color)">{{color[0]}}</div>
         </div>
         <h3 class="mat-subheading-2">Primary Theme 2</h3>
         <mat-divider></mat-divider>
         <div class="colors">
           <div mat-ripple [matTooltip]="'copy ' + color[1] + ' to clipboard'" class="color mat-body-2" *ngFor="let color of primary2Colors"
-            [style.background-color]="color[1]"
-            (click)="copyColor(color)">{{color[0]}}</div>
+            [style.background-color]="color[1]" (click)="copyColor(color)">{{color[0]}}</div>
         </div>
       </mat-card>
       <mat-card class="mat-elevation-z2">
@@ -37,7 +34,7 @@
         <div class="mat-body-1">
           1. Import fonts into index.html
           <mat-form-field appearance="fill">
-            <input matInput [value]="fontsLink">
+            <input readonly matInput [value]="fontsLink">
           </mat-form-field>
         </div>
         <div class="mat-body-1">
@@ -47,9 +44,14 @@
         <div class="mat-body-1">
           3. Include it in style.scss
           <mat-form-field appearance="fill">
-            <input matInput [value]="themeScssInclude">
+            <input readonly matInput [value]="themeScssInclude">
           </mat-form-field>
         </div>
+      </mat-card>
+      <mat-card class="mat-elevation-z2">
+        <h1 class="mat-h1">Good ol' CSS</h1>
+        <span class="mat-body-1">The
+          <a target="_blank" [href]="themeCssLink">CSS theme</a> includes classes for typography, elevation and various MD components.</span>
       </mat-card>
     </div>
     <div>
@@ -78,28 +80,40 @@
       </mat-card>
       <mat-card class="mat-elevation-z2">
         <h1 class="mat-h1">Buttons</h1>
-        <div class="default-spacing mat-body-1" fxLayout="row" fxLayoutAlign="center center">
-          Fab
-          <span fxFlex></span>
+        <div class="default-spacing mat-body-1">
+          FABs for primary actions.
+          <br>
           <button mat-fab>
             <mat-icon>check</mat-icon>
           </button>
         </div>
-        <div class="default-spacing mat-body-1" fxLayout="row" fxLayoutAlign="center center">
-          Confirm
-          <span fxFlex></span>
-          <button mat-raised-button color="accent">save</button>
+        <div class="default-spacing mat-body-1">
+          1. Primary actions, usually optimistic.
+          <button mat-raised-button color="accent">SAVE</button>
         </div>
-        <div class="default-spacing mat-body-1" fxLayout="row" fxLayoutAlign="center center">
-          Abort
-          <span fxFlex></span>
-          <button mat-stroked-button>cancel</button>
+        <div class="default-spacing mat-body-1">
+          2. Actions with more emphasis.
+          <button mat-stroked-button>MARK AS READ</button>
+        </div>
+        <div class="default-spacing mat-body-1">
+          3. Dismissive or less important actions.
+          <button mat-button>CANCEL</button>
         </div>
       </mat-card>
       <mat-card class="mat-elevation-z2">
-        <h1 class="mat-h1">Good ol' CSS</h1>
-        <span class="mat-body-1">The
-          <a target="_blank" [href]="themeCssLink">CSS theme</a> includes classes for typography, elevation and various MD components.</span>
+        <h1 class="mat-h1">Logos</h1>
+        <div fxLayout="row">
+          <img style="height: 48px" src="assets/azing-logo.svg" alt="Azing Logo">
+          <span fxFlex></span>
+          <img style="height: 48px" src="assets/azing-icon.svg" alt="Azing Icon">
+        </div>
+        <br>
+        <a href="assets/azing-logos.zip">
+          <button mat-stroked-button>
+              Get Azing Icon Pack
+              <mat-icon>cloud_download</mat-icon>
+          </button>
+        </a>
       </mat-card>
     </div>
   </div>
