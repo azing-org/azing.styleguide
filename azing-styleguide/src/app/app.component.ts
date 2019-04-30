@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
+
+declare const float: any;
+declare const floaters: any;
 
 @Component({
   selector: 'app-root',
@@ -41,13 +44,55 @@ export class AppComponent {
     ['700', '#3828c4'],
     ['800', '#2122bd'],
     ['900', '#0015b3'],
-  ]
-  fontsLink = `<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Open+Sans:400,600,700|Material+Icons" rel="stylesheet">`;
+  ];
+  fontsLink = `<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Material+Icons" rel="stylesheet">`;
   themeScssLink = `https://github.com/azing-org/azing.styleguide/blob/master/azing-styleguide/src/theme.scss`;
   themeCssLink = `https://azing-org.github.io/azing.styleguide/azing-styleguide/theme.css`;
   themeScssInclude = `@import 'theme.scss';`;
 
+  private floater: any;
+
+  constructor(
+    private elRef: ElementRef,
+  ) { }
+
   copyColor(color) {
     (navigator as any).clipboard.writeText(color[1]);
+  }
+
+  showFloat() {
+    const attachTo = this.elRef.nativeElement.querySelector('.floater-target');
+    if (!this.floater) {
+      const tpl = document.createElement('div');
+      tpl.className = 'mat-body-1';
+      Object.assign(tpl.style, {
+        borderRadius: '8px',
+        overflow: 'hidden',
+        backgroundColor: '#fff',
+        padding: '16px',
+      });
+      tpl.innerHTML = 'Hello';
+      this.floater = float({
+        attachTo,
+        hasBackdrop: true,
+        closeOnBackdropClick: true,
+        backdropColor: 'transparent',
+        positionStrategy: floaters.positionStrategies.ninja('TOP_RIGHT', {
+                x: 16,
+                y: 0
+        }, false, false),
+        template: tpl,
+        customCss: `
+            :host {
+              border-radius: 8px;
+              border: 1px solid rgba(0,0,0,0.1);
+              box-shadow: 0 4px 10px 4px rgba(0,0,0,0.06);
+            }
+        `,
+        transition: () => 'bounce-left',
+        arrowStrategy: floaters.arrowStrategies.leftStart(6, 16),
+      });
+    }
+    this.floater.show();
   }
 }

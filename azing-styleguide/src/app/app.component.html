@@ -1,12 +1,12 @@
-<mat-toolbar class="mat-elevation-z3">
-  <img class="logo" src="https://azing.org/Portals/_default/skins/azing/images/logo.svg" alt="Azing Logo">
+<mat-toolbar>
+  <img class="logo" src="https://azing.org/Portals/_default/skins/azing2019/live/images/logo.svg" alt="Azing Logo">
 </mat-toolbar>
-<div fxLayout="row" class="content" fxLayoutAlign="center center">
-  <div>
-    <h1 class="main-title mat-display-3">Azing Styleguide</h1>
-    <h2 class="mat-h2">For developing Material Design Applications.</h2>
+<div class="content">
+  <div class="intro">
+    <h1 class="main-title mat-display-3">azing design</h1>
+    <!-- <h2 class="mat-h2">Styleguide</h2> -->
   </div>
-  <div fxLayout="row" fxLayoutAlign="center center">
+  <div class="main-content" fxLayout="row" fxLayoutAlign="center top">
     <div>
       <mat-card class="mat-elevation-z2">
         <h1 class="mat-h1">Color</h1>
@@ -114,6 +114,19 @@
               <mat-icon>cloud_download</mat-icon>
           </button>
         </a>
+      </mat-card>
+    </div>
+    <div>
+      <mat-card>
+          <h1 class="mat-h1">Floaters</h1>
+          <div class="default-spacing mat-body-1">
+            <a href="https://github.com/christophbuehler/float">the float library</a>
+            <br>
+            <br>
+            <mat-divider></mat-divider>
+          </div>
+          <pre>This is a test</pre>
+          <button class="floater-target" mat-stroked-button (click)="showFloat($event)">show</button>
       </mat-card>
     </div>
   </div>
