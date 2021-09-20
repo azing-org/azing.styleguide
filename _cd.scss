@@ -1,0 +1,117 @@
+$gray: #777e8e;
+$clr-primary: #4b2fcd;
+
+@mixin input($borderless: false, $sm: false) {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0 12px;
+  border-radius: 2px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  padding-right: 0;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+
+  @if $sm {
+    line-height: 30px;
+    height: 32px;
+  } @else {
+    line-height: 40px;
+    height: 42px;
+  }
+
+  @if not $borderless {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  &:hover {
+    border-color: $gray;
+    z-index: 1;
+  }
+
+  &:focus, &:focus-within {
+    border-color: #3828c4;
+    box-shadow: 0 0 0 4px rgb(0 0 40 / 4%);
+    z-index: 1;
+  }
+}
+
+@mixin button($borderless: false, $sm: false, $primary: false, $toggled: false, $inverted: false) {
+  $btn-clr: $gray;
+  $btn-clr-bg: transparent;
+  $btn-clr-disabled: #aaa;
+  $btn-clr-disabled-bg: #eee;
+  $btn-border-clr: rgba(0, 0, 0, 0.1);
+  $btn-clr-primary: $clr-primary;
+
+  @if $inverted {
+    $btn-clr-bg: $btn-clr-primary;
+    $btn-clr-primary: #fff;
+    $btn-clr: #fff;
+  }
+
+  color: $btn-clr;
+  padding: 0 16px 0 0;
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  background-color: $btn-clr-bg;
+
+  @if $sm {
+    line-height: 30px;
+    height: 32px;
+  } @else {
+    line-height: 40px;
+    height: 42px;
+  }
+
+  @if not $borderless {
+    border: 1px solid $btn-border-clr;
+  }
+
+  @if $toggled {
+    color: $btn-clr-primary;
+    border-color: $btn-clr-primary;
+    background-color: change-color($btn-clr-primary, $alpha: .1);
+  } 
+
+  @if $primary {
+    color: $btn-clr-primary;
+  }
+
+  &:disabled {
+    color: $btn-clr-disabled;
+
+    @if not $borderless {
+      background: $btn-clr-disabled-bg;
+    }
+  }
+
+  &:focus {
+    @if not $borderless {
+      border-color: $btn-clr-primary;
+      box-shadow: 0 0 0 4px rgb(0 0 40 / 4%);
+    }
+  }
+
+  mat-icon {
+    text-align: center;
+    vertical-align: top;
+
+    @if $sm {
+      height: 30px;
+      line-height: 30px;
+      width: 30px;
+      font-size: 20px;
+    } @else {
+      height: 40px;
+      line-height: 40px;
+      width: 40px;
+      font-size: 24px;
+    }
+  }
+}
